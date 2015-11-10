@@ -183,7 +183,7 @@
   
     <div class="article-meta">
       <a href="/2015/11/10/tensorflow/" class="article-date">
-  	<time datetime="2015-11-10T07:38:27.000Z" itemprop="datePublished">2015-11-10</time>
+  	<time datetime="2015-11-10T07:50:31.000Z" itemprop="datePublished">2015-11-10</time>
 </a>
     </div>
   
@@ -207,6 +207,7 @@
       
         <h2 id="Resources">Resources</h2><h3 id="Slides">Slides</h3><p><a href="http://vdisk.weibo.com/s/dzyekj5eJIkRk" target="_blank" rel="external">http://vdisk.weibo.com/s/dzyekj5eJIkRk</a></p>
 <h3 id="White_Paper">White Paper</h3><p><a href="http://tensorflow.org/" target="_blank" rel="external">http://tensorflow.org/</a><br><a href="http://download.tensorflow.org/paper/whitepaper2015.pdf" target="_blank" rel="external">http://download.tensorflow.org/paper/whitepaper2015.pdf</a></p>
+<h3 id="Google第二代深度学习引擎TensorFlow开源（CMU邢波独家点评、白皮书全文、视频翻译）">Google第二代深度学习引擎TensorFlow开源（CMU邢波独家点评、白皮书全文、视频翻译）</h3><p><a href="http://chuansong.me/n/1900287" target="_blank" rel="external">http://chuansong.me/n/1900287</a></p>
 <h3 id="如何评价Tensorflow和其它深度学习系统">如何评价Tensorflow和其它深度学习系统</h3><p>转自<a href="http://weibo.com/p/1001603907610737775666" target="_blank" rel="external">http://weibo.com/p/1001603907610737775666</a></p>
 <p>今天Google开源了新一代深度学习引擎TensorFlow。本文解释了一些TF里面我觉得可以从系统方面值得看的地方。</p>
 <h4 id="编程模型">编程模型</h4><p>TF目前的编程模型是符号编程 (symbolic computation)。大致的想法就是使用符号API去描述计算通过计算流图的方式，以及更新逻辑，然后通过像服务器去发送计算流图的方式来进行计算。原因是所有的计算全部需要通过计算流图来描述，也就是其实通pythonAPI编写的主要是Tensorflow这一门新的语言。然后通过session的run来进行一些交互。这样子做的主要好处是计算流图的执行可以进行比较多的优化，因为用户只是指定了数据关系，以及需要什么，计算的中间变量如何分配，是否需要保留，都是可以进行优化的。这一点是相比于Torch和numpy的库相对可以更多优化的地方。不过反过来说，和原有host语言的交互会相对比较有限一些，会比较难利用一些host语言(python)的特性来编写如条件和更新法则之类的东西。</p>
