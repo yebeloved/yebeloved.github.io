@@ -112,7 +112,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Books/" style="font-size: 10px;">Books</a> <a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/Feelings/" style="font-size: 20px;">Feelings</a> <a href="/tags/Finance/" style="font-size: 10px;">Finance</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/Tech/" style="font-size: 10px;">Tech</a>
+						<a href="/tags/Books/" style="font-size: 10px;">Books</a> <a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/Feelings/" style="font-size: 20px;">Feelings</a> <a href="/tags/Finance/" style="font-size: 10px;">Finance</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/Tech/" style="font-size: 20px;">Tech</a>
 					</div>
 				</section>
 				
@@ -346,5 +346,35 @@ MathJax.Hub.Queue(function() {
 
 
   </div>
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 </body>
 </html>
